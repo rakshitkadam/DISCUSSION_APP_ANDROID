@@ -102,7 +102,7 @@ public class GoogleSignInActivity extends FragmentActivity implements GoogleApiC
 
         FirebaseUser currentUser = mAuth.getCurrentUser();
         if(currentUser != null) {
-            //Not a first time user
+            // If the user is not logging for the first time, his credentials are locally stored, hence no need for asking to log in
             editor.putBoolean("LoggedIn", true);
             editor.commit();
             Intent in = new Intent(this, HomeScreenActivity.class);
@@ -142,15 +142,14 @@ public class GoogleSignInActivity extends FragmentActivity implements GoogleApiC
                         if (task.isSuccessful()) {
                             DatabaseReference dRef = FirebaseDatabase.getInstance().getReference().child("Users");
                             FirebaseUser firebaseUser = mAuth.getCurrentUser();
-
+                            // getting user's info via the google sign in option
                             String id = firebaseUser.getUid();
                             String place_id = null;
                             String photoUrl = firebaseUser.getPhotoUrl().toString();
                             String first_name = firebaseUser.getDisplayName();
-
                             String last_name = firebaseUser.getDisplayName();
                             String notificationToken = "NULL";
-
+                                
                             Map<String, Object> updateValues = new HashMap<>();
                             updateValues.put("id", id);
                             updateValues.put("place_id", place_id);
@@ -159,8 +158,9 @@ public class GoogleSignInActivity extends FragmentActivity implements GoogleApiC
                             updateValues.put( "last_name", last_name);
                             updateValues.put("notificationToken", notificationToken);
                             updateValues.put("placeSet",false);
+                            // Filled the user's info into the map in order to update the database with the map
                             dRef.child(firebaseUser.getUid()).updateChildren(updateValues);
-
+                            // Updating the data into the database
                             Intent in = new Intent(getApplicationContext(), PlaceAutocompleteActivity.class);
                             startActivity(in);
                         } else {
