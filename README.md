@@ -1,15 +1,14 @@
-# Talk Stalker
+# DiscussionApp
 
-TalkStalker is an Android App for Group Discussion built using Android Studio & Firebase.
+DiscussionApp is an Android App for School/class Announcements, school blogs,  articles, important class notes for students and discussions on it.
 
 ## Features
 
-1. Register/Login.
+1. Register/Login via Google Sign in Feature (Only one time login, after that credentials are saved so no need to login afterwards)
 2. Select Region/Location.
-3. Post Discussions based on a region, with text & media data.
-4. Like, Comment on posts.
-5. Change Profile Image, Name, Email, Phone.
-6. Other users get Notification on liking/commenting.
+3. Post Discussion on the articles/announcement/notes
+4. Change Profile Image, Name, Email, Phone.
+5. Choose the people who can see your announcement/article and discuss on it!!!
 
 ## Apk File
 
