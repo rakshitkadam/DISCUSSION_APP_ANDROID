@@ -1,6 +1,7 @@
 # DiscussionApp
 
 DiscussionApp is an Android App for School/class Announcements, school blogs,  articles, important class notes for students and discussions on it.
+One can enjoy its "visibility" feature which provides user the power to choose which people can see their post, so a class notes/topics/announcement can be circulated in the class, while the scope can also be enlarged throughout the school.
 
 ## Features
 
