@@ -158,7 +158,6 @@ public class HomeScreenActivity extends AppCompatActivity {
         adapter.addFragment(new DiscussionFragment(), "Discussions");
         adapter.addFragment(new ProfileFragment(), "Profile");
         viewPager.setAdapter(adapter);
-
     }
 
     @Override
@@ -228,11 +227,13 @@ public class HomeScreenActivity extends AppCompatActivity {
         }
     }
     public void composeEmail() {
+        // Opening a new intent of mail
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts(
                 "mailto",officialAddress, null));
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Subject");
         emailIntent.putExtra(Intent.EXTRA_TEXT, "Body");
         startActivity(Intent.createChooser(emailIntent, "Send email..."));
+        
 
     }
 
