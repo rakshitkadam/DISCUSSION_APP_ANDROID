@@ -16,4 +16,4 @@ Download the APK from [here](https://drive.google.com/file/d/0BwcoMJ0DNQ-ReGRTRD
 
 ## Screenshots
 
-![TalkStalker](https://i.imgur.com/ngNTPoc.jpg)
+![Discussions App]
