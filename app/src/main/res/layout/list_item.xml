@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#ddd"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="5dp"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:background="?android:selectableItemBackground"
+            android:padding="14dp">
+
+            <FrameLayout
+                android:id="@+id/image_container"
+                android:layout_width="0dp"
+                android:layout_height="6dp"
+                android:layout_marginRight="10dp">
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/dis_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/image_container"
+                android:text="Time to clean the streets"
+                android:textColor="#222"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dis_author"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dis_subject"
+                android:layout_toRightOf="@id/image_container"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:text="David Franco"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/dis_timestamp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/dis_author"
+                android:layout_marginBottom="5dp"
+                android:layout_toRightOf="@id/image_container"
+                android:text="11 minutes ago"
+                android:textSize="11sp" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
