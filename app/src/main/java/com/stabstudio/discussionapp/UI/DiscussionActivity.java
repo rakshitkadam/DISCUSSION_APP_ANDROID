@@ -128,9 +128,9 @@ public class DiscussionActivity extends AppCompatActivity {
             String author = preferences.getString("first_name", "Anonymous");
             String commId = dissCommRef.child(discussionId).push().getKey();
             Comment comment = new Comment(commId, discussionId, author, commentStr, timeStamp);
-            dissCommRef.child(discussionId).child(commId).setValue(comment);
-            commentRef.child(commId).setValue(comment);
-            commentsList.add(comment);
+            dissCommRef.child(discussionId).child(commId).setValue(comment); // Inserting new comment in the database
+            commentRef.child(commId).setValue(comment); 
+            commentsList.add(comment); // Adding the new comment in the list of comments
             adapter.notifyDataSetChanged();
         }
     }
@@ -150,6 +150,7 @@ public class DiscussionActivity extends AppCompatActivity {
                 for(DataSnapshot snapshot : dataSnapshot.child(discussionId).getChildren()){
                     Comment temp = snapshot.getValue(Comment.class);
                     commentsList.add(temp);
+                    // Fill the list of comments from fetching the comments from the database
                 }
                 adapter = new CommentsAdapter(DiscussionActivity.this, commentsList);
                 recyclerView.setAdapter(adapter);
