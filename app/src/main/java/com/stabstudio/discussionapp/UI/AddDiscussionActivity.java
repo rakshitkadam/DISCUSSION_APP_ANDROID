@@ -166,6 +166,7 @@ public class AddDiscussionActivity extends AppCompatActivity {
             String visibleUsersId = "";
             for(int i=0;i<finalListOfChosenUsers.size();i++) {
                   visibleUsersId  += idOfUsers.get(finalListOfChosenUsers.get(i)) + ",";
+                  // Get all the allowed visiblee users in one string
               }
             DatabaseReference disRef = dRef.child("Discussions");
             String placeId = preferences.getString("user_place", "no_place");
@@ -178,7 +179,7 @@ public class AddDiscussionActivity extends AppCompatActivity {
                                DateTime.now().getMonthOfYear() + "/" +
                                DateTime.now().getYear();
             Discussion newDiscussion = new Discussion(disId, placeId, userId, topicStr, visibleUsersId, contentStr, timeStamp, 0, 0);
-
+            // Push the new discussion in the database
             disRef.child(disId).setValue(newDiscussion);
 
             progressDialog.dismiss();
