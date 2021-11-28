@@ -200,6 +200,7 @@ public class AddDiscussionActivity extends AppCompatActivity {
         for(int i=0;i<idOfUsers.size();i++)
         {
             usersVisible[i] = namesOfStudents.get(i);
+            // Copy all the visible users into the userVisible array
         }
         builder.setMultiChoiceItems(usersVisible, chosenVisibleUsers, new DialogInterface.OnMultiChoiceClickListener() {
             @Override
@@ -214,6 +215,7 @@ public class AddDiscussionActivity extends AppCompatActivity {
                     for(int i=0;i<finalListOfChosenUsers.size();i++) {
                         if(finalListOfChosenUsers.get(i)==which){
                             getIndex = i;
+                            // get the index of the element to be deleted in the getIndex variable.
                         }
                     }
                     if(getIndex!=-1)
