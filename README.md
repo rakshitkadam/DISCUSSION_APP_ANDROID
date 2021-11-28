@@ -8,7 +8,7 @@ DiscussionApp is an Android App for School/class Announcements, school blogs,  a
 2. Select Region/Location.
 3. Post Discussion on the articles/announcement/notes
 4. Change Profile Image, Name, Email, Phone.
-5. Choose the people who can see your announcement/article and discuss on it!!!
+5. Choose the people who can see your announcement/article !!!
 
 ## Apk File
 
