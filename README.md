@@ -10,10 +10,5 @@ DiscussionApp is an Android App for School/class Announcements, school blogs,  a
 4. Change Profile Image, Name, Email, Phone.
 5. Choose the people who can see your announcement/article !!!
 
-## Apk File
+NOTE:  While selecting the city, please select one of the city among following, as for now I have added only these cities: PUNE, AURANGABAD, HYDERABAD, BANGALORE, MUMBAI
 
-Download the APK from [here](https://drive.google.com/file/d/0BwcoMJ0DNQ-ReGRTRDFkbWp5bkk/view?usp=sharing).
-
-## Screenshots
-
-![Discussions App]
