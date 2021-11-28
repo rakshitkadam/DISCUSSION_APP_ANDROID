@@ -112,12 +112,14 @@ public class PlaceAutocompleteActivity extends AppCompatActivity {
 
                 uploadImage(firebaseUser.getPhotoUrl(), user_id);
                 User newUser = new User(user_id, place_id, photoUrl, first_name, last_name, "", notificationToken);
+                // Making a new User object to update data in dabase
                 newUser.setPlaceSet(true);
                 usersRef.child(firebaseUser.getUid()).setValue(newUser);
+                // Added the user in database
                 editor.putBoolean("LoggedIn", true);
                 editor.commit();
 
-                Intent intent = new Intent(getApplicationContext(), HomeScreenActivity.class);
+                Intent intent = new Intent(getApplicationContext(), HomeScreenActivity.class);  
                 startActivity(intent);
                 finish();
             }
